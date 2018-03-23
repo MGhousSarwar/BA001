@@ -30,7 +30,7 @@ namespace Linear_Equation_By_Genetic_Algo
             end = 10;
             while (true)
             {
-                minerror = count;
+                minerror = 100;
                 for (int i = 0; i < count; i++)//Create Random Population
                 {
                     
@@ -48,6 +48,7 @@ namespace Linear_Equation_By_Genetic_Algo
                         if (error == 0)
                         {
                             Console.WriteLine("y = " + m + "x + " + c);//goal found
+                            Console.WriteLine(list.Count);
                             found = true;
                             break;
                         }
@@ -65,6 +66,7 @@ namespace Linear_Equation_By_Genetic_Algo
                 }
                 if (!found)//mutation when goal not found
                 {
+                    Console.WriteLine("mutation");
                     class1 obj = list.Find(p => p.error == minerror);
                     start = obj.m;
                     start = obj.c;
@@ -74,6 +76,8 @@ namespace Linear_Equation_By_Genetic_Algo
                     break;
                 }
             }
+            Console.ReadKey();
+
         }
     }
 }
