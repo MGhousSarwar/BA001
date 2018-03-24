@@ -41,7 +41,7 @@ namespace Linear_Equation_By_Genetic_Algo
                     list.Add(new class1() { m = m, c = c, error = error });
                     if (error == 0)//Fittness Test
                     {
-
+                        //
                         ycalc = (m * x2) + c;
                         error = ycalc - y2;
                         list.Add(new class1() { m = m, c = c, error = error });
